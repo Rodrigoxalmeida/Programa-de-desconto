@@ -10,9 +10,14 @@ public class Program {
 		
 		Descontos desc = new Descontos();
 		
+		for(int i = 0; i <=10; i++) {
 		try {
 		String valor = JOptionPane.showInputDialog(null,"Valor do produto: ");
 		String cod = JOptionPane.showInputDialog(null,"Codigo de desconto: ");
+		
+		if(valor == "s") {
+			System.exit(0);
+		}
 		
 		desc.setValor(Double.parseDouble(valor));
 		desc.setCod(Integer.parseInt(cod));
@@ -20,11 +25,13 @@ public class Program {
 		
 		}catch(NumberFormatException e) {
 			JOptionPane.showMessageDialog(null, "Digite somente numeros","Erro",JOptionPane.ERROR_MESSAGE);
+		}catch(NullPointerException e) {
+			JOptionPane.showMessageDialog(null,"Valor/codigo nulo","Erro",JOptionPane.ERROR_MESSAGE);
 		}
 		
 		
 		JOptionPane.showMessageDialog(null, desc);
-		
+		}
 	}
 
 }

@@ -35,7 +35,7 @@ public class Descontos {
 		}
 		if(cod <= 0 || cod >= 5) {
 			JOptionPane.showMessageDialog(null, "Codigo invalido !");
-			desc = valor;
+			desc = 0.0;
 		}
 		
 		return desc;
