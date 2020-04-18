@@ -14,11 +14,7 @@ public class Program {
 		try {
 		String valor = JOptionPane.showInputDialog(null,"Valor do produto: ");
 		String cod = JOptionPane.showInputDialog(null,"Codigo de desconto: ");
-		
-		if(valor == "s") {
-			System.exit(0);
-		}
-		
+				
 		desc.setValor(Double.parseDouble(valor));
 		desc.setCod(Integer.parseInt(cod));
 		desc.calcDesc(Double.parseDouble(valor),Integer.parseInt(cod));
@@ -28,7 +24,6 @@ public class Program {
 		}catch(NullPointerException e) {
 			JOptionPane.showMessageDialog(null,"Valor/codigo nulo","Erro",JOptionPane.ERROR_MESSAGE);
 		}
-		
 		
 		JOptionPane.showMessageDialog(null, desc);
 		}
