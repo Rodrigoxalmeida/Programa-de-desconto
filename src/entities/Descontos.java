@@ -33,7 +33,7 @@ public class Descontos {
 			desc = (valor * 50)/ 100;
 			desc = valor - desc;
 		}
-		if(cod >= 5) {
+		if(cod <= 0 || cod >= 5) {
 			JOptionPane.showMessageDialog(null, "Codigo invalido !");
 			desc = valor;
 		}
